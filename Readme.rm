@@ -11,3 +11,23 @@ kubectl config use-context kind-kubecon26
 
 
 kubectl config get-contexts
+
+check if cluster runs
+kubectl cluster-info --context kind-my-cluster
+
+Kind automatically configures kubectl to use the new cluster. Verify the context:
+kubectl config get-contexts
+
+6. (Optional) Access the Dashboard
+If you want a visual interface, deploy the Kubernetes Dashboard:
+kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v2.7.0/aio/deploy/recommended.yaml
+
+Then, access it via:
+kubectl proxy
+
+Open http://localhost:8001/api/v1/namespaces/kubernetes-dashboard/services/https:kubernetes-dashboard:/proxy/ in your browser.
+
+
+
+
+
