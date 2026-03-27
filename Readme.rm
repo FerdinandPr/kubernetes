@@ -1,0 +1,13 @@
+Kind
+
+cluster anlegen
+kind create cluster --name my-multi-node-cluster --config .\multi_node_cluster.yml
+
+cluster anzeigen
+kubectl config get-contexts
+
+context switch
+kubectl config use-context kind-kubecon26
+
+
+kubectl config get-contexts
